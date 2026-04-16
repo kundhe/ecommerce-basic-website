@@ -12,6 +12,7 @@ export const ProductService = createApi({
         getSpecificProduct: builder.query<Product, number>({query: (id)=> `products/${id}`}),
 
 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         login : builder.mutation<any, {email:string, password:string}>({
             query: (requests) => ({
                 url : 'https://fakestoreapi.com',
@@ -35,3 +36,5 @@ export const {
     useGetSpecificProductQuery,
     useLoginMutation
   } = ProductService;
+
+

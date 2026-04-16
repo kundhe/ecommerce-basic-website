@@ -2,7 +2,7 @@ import { Heart } from "feather-icons-react";
 import { useParams } from "react-router-dom";
 import { useGetSpecificProductQuery } from "../store/slices/productSlice";
 
-const ProductPage = ({}) => {
+const ProductPage = () => {
   const { id } = useParams<{ id: string }>();
   const productId = id ? parseInt(id, 10) : 0;
 
